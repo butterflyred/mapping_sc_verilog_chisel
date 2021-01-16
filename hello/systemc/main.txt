@@ -1,0 +1,26 @@
+Simulation Time: 0 s, clock = 0, reset = X, io_out = XXXXXXXX
+Simulation Time: 0 s, clock = 1, reset = 0, io_out = XXXXXXXX
+
+Info: (I702) default timescale unit used for tracing: 1 ps (RESULT.vcd)
+Simulation Time: 5 ns, clock = 0, reset = 0, io_out = XXXXXXXX
+Simulation Time: 10 ns, clock = 1, reset = 1, io_out = XXXXXXXX
+Simulation Time: 10 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 15 ns, clock = 0, reset = 1, io_out = 00000111
+Simulation Time: 20 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 25 ns, clock = 0, reset = 1, io_out = 00000111
+Simulation Time: 30 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 35 ns, clock = 0, reset = 1, io_out = 00000111
+Simulation Time: 40 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 45 ns, clock = 0, reset = 1, io_out = 00000111
+Simulation Time: 50 ns, clock = 1, reset = 0, io_out = 00000111
+Simulation Time: 50 ns, clock = 1, reset = 0, io_out = 00101010
+Simulation Time: 55 ns, clock = 0, reset = 0, io_out = 00101010
+Simulation Time: 60 ns, clock = 1, reset = 1, io_out = 00101010
+Simulation Time: 60 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 65 ns, clock = 0, reset = 1, io_out = 00000111
+Simulation Time: 70 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 75 ns, clock = 0, reset = 1, io_out = 00000111
+Simulation Time: 80 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 85 ns, clock = 0, reset = 1, io_out = 00000111
+Simulation Time: 90 ns, clock = 1, reset = 1, io_out = 00000111
+Simulation Time: 95 ns, clock = 0, reset = 1, io_out = 00000111
