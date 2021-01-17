@@ -1,0 +1,36 @@
+sbt:chisel-tutorial> test:runMain solutions.Launcher Hello --backend-name=verilator --is-verbose
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[info] running solutions.Launcher Hello --backend-name=verilator --is-verbose
+Starting tutorial Hello
+[info] [0.002] Elaborating design...
+[info] [0.119] Done elaborating.
+Total FIRRTL Compile Time: 249.6 ms
+cd /home/chu/Desktop/learning-journey/test_run_dir/solutions/Hello && verilator --cc Hello.v --assert -Wno-fatal -Wno-WIDTH -Wno-STMTDLY -O1 --top-module Hello +define+TOP_TYPE=VHello +define+PRINTF_COND=!Hello.reset +define+STOP_COND=!Hello.reset -CFLAGS "-Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VHello -DVL_USER_FINISH -include VHello.h" -Mdir /home/chu/Desktop/learning-journey/test_run_dir/solutions/Hello --exe /home/chu/Desktop/learning-journey/test_run_dir/solutions/Hello/Hello-harness.cpp --trace
+make: Entering directory '/home/chu/Desktop/learning-journey/test_run_dir/solutions/Hello'
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VHello -DVL_USER_FINISH -include VHello.h  -std=gnu++14 -Os -c -o Hello-harness.o /home/chu/Desktop/learning-journey/test_run_dir/solutions/Hello/Hello-harness.cpp
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VHello -DVL_USER_FINISH -include VHello.h  -std=gnu++14 -Os -c -o verilated.o /usr/local/share/verilator/include/verilated.cpp
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VHello -DVL_USER_FINISH -include VHello.h  -std=gnu++14 -Os -c -o verilated_vcd_c.o /usr/local/share/verilator/include/verilated_vcd_c.cpp
+/usr/bin/perl /usr/local/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VHello.cpp VHello__Trace.cpp VHello__Slow.cpp VHello__Syms.cpp VHello__Trace__Slow.cpp > VHello__ALL.cpp
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VHello -DVL_USER_FINISH -include VHello.h  -std=gnu++14 -Os -c -o VHello__ALL.o VHello__ALL.cpp
+Archive ar -cr VHello__ALL.a VHello__ALL.o
+g++    Hello-harness.o verilated.o verilated_vcd_c.o VHello__ALL.a      -o VHello
+make: Leaving directory '/home/chu/Desktop/learning-journey/test_run_dir/solutions/Hello'
+sim start on chu-Think at Sun Jan 17 08:33:18 2021
+inChannelName: 00007829.in
+outChannelName: 00007829.out
+cmdChannelName: 00007829.cmd
+STARTING test_run_dir/solutions/Hello/VHello
+[info] [0.000] SEED 1610843595615
+[info] [0.001] STEP 0 -> 1
+[info] [0.008]   POKE Hello.io_rst <- 0
+[info] [0.012]   PEEK Hello.io_out -> 42
+[info] [0.015]   EXPECT Hello.io_out -> 42 == 42 PASS
+[info] [0.016] STEP 1 -> 2
+[info] [0.017]   POKE Hello.io_rst <- 1
+[info] [0.017]   PEEK Hello.io_out -> 7
+[info] [0.018]   EXPECT Hello.io_out -> 7 == 7 PASS
+Enabling waves..
+Exit Code: 0
+[info] [0.028] RAN 2 CYCLES PASSED
+Tutorials passing: 1
+[success] Total time: 3 s, completed Jan 17, 2021, 8:33:18 AM
