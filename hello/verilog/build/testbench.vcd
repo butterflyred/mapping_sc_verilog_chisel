@@ -1,0 +1,50 @@
+$date
+    Jan 17, 2021  11:48:09
+$end
+$version
+    TOOL:	ncsim(64)	15.20-s039
+$end
+$timescale
+    1 ns
+$end
+
+$scope module testbench $end
+
+$scope module dut $end
+$var wire      1 !    clock  $end
+$var wire      1 "    io_rst  $end
+$var wire      8 #    io_out [7:0] $end
+$var wire      6 $    _GEN_0 [5:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+x!
+x"
+b0x0xx1x #
+bx0xx1x $
+$end
+#5
+0"
+1!
+b101010 $
+b101010 #
+#10
+1"
+0!
+b111 $
+b111 #
+#25
+1!
+#40
+0"
+0!
+b101010 $
+b101010 #
+#45
+1"
+b111 $
+b111 #
+#50

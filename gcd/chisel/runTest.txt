@@ -1,0 +1,130 @@
+sbt:chisel-tutorial> test:runMain solutions.Launcher RealGCD --backend-name=verilator --is-verbose
+[info] compiling 1 Scala source to /home/chu/Desktop/learning-journey/target/scala-2.11/classes ...
+[info] compiling 1 Scala source to /home/chu/Desktop/learning-journey/target/scala-2.11/test-classes ...
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[info] running solutions.Launcher RealGCD --backend-name=verilator --is-verbose
+Starting tutorial RealGCD
+[info] [0.001] Elaborating design...
+[info] [1.176] Done elaborating.
+Total FIRRTL Compile Time: 382.1 ms
+cd /home/chu/Desktop/learning-journey/test_run_dir/solutions/RealGCD && verilator --cc RealGCD.v --assert -Wno-fatal -Wno-WIDTH -Wno-STMTDLY -O1 --top-module RealGCD +define+TOP_TYPE=VRealGCD +define+PRINTF_COND=!RealGCD.reset +define+STOP_COND=!RealGCD.reset -CFLAGS "-Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VRealGCD -DVL_USER_FINISH -include VRealGCD.h" -Mdir /home/chu/Desktop/learning-journey/test_run_dir/solutions/RealGCD --exe /home/chu/Desktop/learning-journey/test_run_dir/solutions/RealGCD/RealGCD-harness.cpp --trace
+make: Entering directory '/home/chu/Desktop/learning-journey/test_run_dir/solutions/RealGCD'
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VRealGCD -DVL_USER_FINISH -include VRealGCD.h  -std=gnu++14 -Os -c -o RealGCD-harness.o /home/chu/Desktop/learning-journey/test_run_dir/solutions/RealGCD/RealGCD-harness.cpp
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VRealGCD -DVL_USER_FINISH -include VRealGCD.h  -std=gnu++14 -Os -c -o verilated.o /usr/local/share/verilator/include/verilated.cpp
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VRealGCD -DVL_USER_FINISH -include VRealGCD.h  -std=gnu++14 -Os -c -o verilated_vcd_c.o /usr/local/share/verilator/include/verilated_vcd_c.cpp
+/usr/bin/perl /usr/local/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VRealGCD.cpp VRealGCD__Trace.cpp VRealGCD__Slow.cpp VRealGCD__Syms.cpp VRealGCD__Trace__Slow.cpp > VRealGCD__ALL.cpp
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -faligned-new -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow     -Wno-undefined-bool-conversion -O1 -DTOP_TYPE=VRealGCD -DVL_USER_FINISH -include VRealGCD.h  -std=gnu++14 -Os -c -o VRealGCD__ALL.o VRealGCD__ALL.cpp
+Archive ar -cr VRealGCD__ALL.a VRealGCD__ALL.o
+g++    RealGCD-harness.o verilated.o verilated_vcd_c.o VRealGCD__ALL.a      -o VRealGCD
+make: Leaving directory '/home/chu/Desktop/learning-journey/test_run_dir/solutions/RealGCD'
+sim start on chu-Think at Sun Jan 17 10:32:55 2021
+inChannelName: 00011094.in
+outChannelName: 00011094.out
+cmdChannelName: 00011094.cmd
+STARTING test_run_dir/solutions/RealGCD/VRealGCD
+[info] [0.002] SEED 1610850771149
+[info] [0.005]   POKE RealGCD.io_in_bits_a <- 48
+[info] [0.005]   POKE RealGCD.io_in_bits_b <- 32
+[info] [0.006]   POKE RealGCD.io_in_valid <- 1
+[info] [0.010]   PEEK RealGCD.io_in_ready -> 1
+[info] [0.013] STEP 0 -> 1
+[info] [0.017]   POKE RealGCD.io_in_valid <- 0
+[info] [0.018] STEP 1 -> 2
+[info] [0.023]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.024]   POKE RealGCD.io_in_valid <- 0
+[info] [0.024] STEP 2 -> 3
+[info] [0.025]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.025]   POKE RealGCD.io_in_valid <- 0
+[info] [0.025] STEP 3 -> 4
+[info] [0.028]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.028]   POKE RealGCD.io_in_valid <- 0
+[info] [0.028] STEP 4 -> 5
+[info] [0.032]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.044]   POKE RealGCD.io_in_valid <- 0
+[info] [0.045] STEP 5 -> 6
+[info] [0.047]   PEEK RealGCD.io_out_valid -> 1
+[info] [0.048]   PEEK RealGCD.io_out_bits -> 16
+[info] [0.049]   EXPECT RealGCD.io_out_bits -> 16 == 16 PASS
+[info] [0.053]   POKE RealGCD.io_in_bits_a <- 7
+[info] [0.054]   POKE RealGCD.io_in_bits_b <- 3
+[info] [0.055]   POKE RealGCD.io_in_valid <- 1
+[info] [0.055]   PEEK RealGCD.io_in_ready -> 0
+[info] [0.056] STEP 6 -> 7
+[info] [0.058]   POKE RealGCD.io_in_bits_a <- 7
+[info] [0.059]   POKE RealGCD.io_in_bits_b <- 3
+[info] [0.060]   POKE RealGCD.io_in_valid <- 1
+[info] [0.062]   PEEK RealGCD.io_in_ready -> 1
+[info] [0.062] STEP 7 -> 8
+[info] [0.063]   POKE RealGCD.io_in_valid <- 0
+[info] [0.063] STEP 8 -> 9
+[info] [0.065]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.065]   POKE RealGCD.io_in_valid <- 0
+[info] [0.074] STEP 9 -> 10
+[info] [0.075]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.075]   POKE RealGCD.io_in_valid <- 0
+[info] [0.076] STEP 10 -> 11
+[info] [0.077]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.077]   POKE RealGCD.io_in_valid <- 0
+[info] [0.077] STEP 11 -> 12
+[info] [0.078]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.078]   POKE RealGCD.io_in_valid <- 0
+[info] [0.078] STEP 12 -> 13
+[info] [0.084]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.087]   POKE RealGCD.io_in_valid <- 0
+[info] [0.087] STEP 13 -> 14
+[info] [0.087]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.088]   POKE RealGCD.io_in_valid <- 0
+[info] [0.088] STEP 14 -> 15
+[info] [0.088]   PEEK RealGCD.io_out_valid -> 1
+[info] [0.089]   PEEK RealGCD.io_out_bits -> 1
+[info] [0.090]   EXPECT RealGCD.io_out_bits -> 1 == 1 PASS
+[info] [0.091]   POKE RealGCD.io_in_bits_a <- 100
+[info] [0.094]   POKE RealGCD.io_in_bits_b <- 10
+[info] [0.100]   POKE RealGCD.io_in_valid <- 1
+[info] [0.101]   PEEK RealGCD.io_in_ready -> 0
+[info] [0.101] STEP 15 -> 16
+[info] [0.102]   POKE RealGCD.io_in_bits_a <- 100
+[info] [0.103]   POKE RealGCD.io_in_bits_b <- 10
+[info] [0.105]   POKE RealGCD.io_in_valid <- 1
+[info] [0.107]   PEEK RealGCD.io_in_ready -> 1
+[info] [0.108] STEP 16 -> 17
+[info] [0.108]   POKE RealGCD.io_in_valid <- 0
+[info] [0.109] STEP 17 -> 18
+[info] [0.109]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.110]   POKE RealGCD.io_in_valid <- 0
+[info] [0.110] STEP 18 -> 19
+[info] [0.112]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.112]   POKE RealGCD.io_in_valid <- 0
+[info] [0.113] STEP 19 -> 20
+[info] [0.114]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.114]   POKE RealGCD.io_in_valid <- 0
+[info] [0.114] STEP 20 -> 21
+[info] [0.114]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.115]   POKE RealGCD.io_in_valid <- 0
+[info] [0.115] STEP 21 -> 22
+[info] [0.116]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.117]   POKE RealGCD.io_in_valid <- 0
+[info] [0.119] STEP 22 -> 23
+[info] [0.123]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.124]   POKE RealGCD.io_in_valid <- 0
+[info] [0.125] STEP 23 -> 24
+[info] [0.130]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.132]   POKE RealGCD.io_in_valid <- 0
+[info] [0.132] STEP 24 -> 25
+[info] [0.136]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.137]   POKE RealGCD.io_in_valid <- 0
+[info] [0.137] STEP 25 -> 26
+[info] [0.137]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.137]   POKE RealGCD.io_in_valid <- 0
+[info] [0.137] STEP 26 -> 27
+[info] [0.138]   PEEK RealGCD.io_out_valid -> 0
+[info] [0.138]   POKE RealGCD.io_in_valid <- 0
+[info] [0.138] STEP 27 -> 28
+[info] [0.139]   PEEK RealGCD.io_out_valid -> 1
+[info] [0.139]   PEEK RealGCD.io_out_bits -> 10
+[info] [0.140]   EXPECT RealGCD.io_out_bits -> 10 == 10 PASS
+Enabling waves..
+Exit Code: 0
+[info] [0.157] RAN 28 CYCLES PASSED
+Tutorials passing: 1
+[success] Total time: 13 s, completed Jan 17, 2021, 10:32:56 AM

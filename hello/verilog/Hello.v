@@ -1,6 +1,5 @@
 module Hello(
   input        clock,
-  input        reset,
   input        io_rst,
   output [7:0] io_out
 );
