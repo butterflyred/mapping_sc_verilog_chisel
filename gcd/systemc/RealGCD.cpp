@@ -22,7 +22,7 @@ void RealGCD::assign_stmt_at_line_17_1506083063()
     while( true )
     {
         wait();
-        allow_enter = (sc_logic)( ( ( sc_logic)( io_in_valid.read() ) ).to_bool() & ( ( sc_logic)( ( 0 == busy.read() ? 0 : 1 ) ) ).to_bool() );
+        allow_enter = (sc_logic)( ( ( sc_logic)( io_in_valid.read() ) ).to_bool() & ( ( sc_logic)( ( 0 == busy.read() ? 1 : 0 ) ) ).to_bool() );
     }
 }
 void RealGCD::assign_stmt_at_line_18_829217329()
@@ -46,7 +46,7 @@ void RealGCD::assign_stmt_at_line_20_399683701()
     while( true )
     {
         wait();
-        io_in_ready = (sc_logic)( ( 0 == busy.read() ? 0 : 1 ) );
+        io_in_ready = (sc_logic)( ( 0 == busy.read() ? 1 : 0 ) );
     }
 }
 void RealGCD::assign_stmt_at_line_21_1717688512()

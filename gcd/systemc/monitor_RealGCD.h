@@ -14,6 +14,9 @@ SC_MODULE(monitor_RealGCD)
     SC_CTOR( monitor_RealGCD )
     {
         SC_METHOD(prc_monitor);
-        sensitive << m_clock << m_reset << m_io_in_ready << m_io_in_valid << m_io_in_bits_a << m_io_in_bits_b << m_io_out_valid << m_io_out_bits;
+        // sensitive << m_clock << m_reset << m_io_in_ready << m_io_in_valid << m_io_in_bits_a << m_io_in_bits_b << m_io_out_valid << m_io_out_bits;
+        sensitive << m_io_out_bits;
+        sensitive << m_io_in_bits_a;
+        sensitive << m_io_in_bits_b;
     }
 };

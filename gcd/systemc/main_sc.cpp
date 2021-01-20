@@ -48,6 +48,7 @@ int sc_main(int argc , char *argv[] )
 	sc_trace(tf, inst_RealGCD.io_in_bits_b,          "inst_RealGCD.io_in_bits_b");
 	sc_trace(tf, inst_RealGCD.io_out_valid,        "inst_RealGCD.io_out_valid");
 	sc_trace(tf, inst_RealGCD.io_out_bits,          "inst_RealGCD.io_out_bits");
+	sc_trace(tf, inst_RealGCD.busy,          "inst_RealGCD.busy");
 
 	sc_trace(tf, inst_driver_RealGCD.d_io_in_valid,          "inst_driver_RealGCD.d_io_in_valid");
 	sc_trace(tf, inst_driver_RealGCD.d_io_in_bits_a,          "inst_driver_RealGCD.d_io_in_bits_a");

@@ -12,17 +12,17 @@
     void driver_RealGCD::drive_io_in_valid()
     {
         d_io_in_valid.write((sc_logic) 1 );
-        wait(50,SC_NS);
+        wait(20,SC_NS);
         d_io_in_valid.write((sc_logic) 0 );
-        wait(450,SC_NS);
+        wait(80,SC_NS);
         d_io_in_valid.write((sc_logic) 1 );
-        wait(50,SC_NS);
+        wait(20,SC_NS);
         d_io_in_valid.write((sc_logic) 0 );
-        wait(450,SC_NS);
+        wait(80,SC_NS);
         d_io_in_valid.write((sc_logic) 1 );
-        wait(50,SC_NS);
+        wait(20,SC_NS);
         d_io_in_valid.write((sc_logic) 0 );
-        wait(450,SC_NS);
+        wait(80,SC_NS);
     }
     void driver_RealGCD::drive_io_in_bits_a()
     {

@@ -10,6 +10,7 @@ SC_MODULE(monitor_Hello)
     SC_CTOR( monitor_Hello )
     {
         SC_METHOD(prc_monitor);
-        sensitive << m_clock << m_reset << m_io_out;
+        // sensitive << m_clock << m_reset << m_io_out;
+        sensitive << m_io_out ;
     }
 };
