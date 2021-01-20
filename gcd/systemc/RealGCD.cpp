@@ -17,7 +17,7 @@
 #include "systemc.h" 
 #include "RealGCD.h" 
 
-void RealGCD::assign_stmt_at_line_17_1506083063()
+void RealGCD::allow_enter()
 {
     while( true )
     {
@@ -25,7 +25,7 @@ void RealGCD::assign_stmt_at_line_17_1506083063()
         allow_enter = (sc_logic)( ( ( sc_logic)( io_in_valid.read() ) ).to_bool() & ( ( sc_logic)( ( 0 == busy.read() ? 1 : 0 ) ) ).to_bool() );
     }
 }
-void RealGCD::assign_stmt_at_line_18_829217329()
+void RealGCD::gt()
 {
     while( true )
     {
@@ -33,7 +33,7 @@ void RealGCD::assign_stmt_at_line_18_829217329()
         gt = (sc_logic)( ( a.read() ).to_uint() > ( b.read() ).to_uint() );
     }
 }
-void RealGCD::assign_stmt_at_line_19_1343293809()
+void RealGCD::sub()
 {
     while( true )
     {
@@ -41,7 +41,7 @@ void RealGCD::assign_stmt_at_line_19_1343293809()
         sub = (sc_lv< 16 >)( ( b.read() ).to_uint() - ( a.read() ).to_uint() );
     }
 }
-void RealGCD::assign_stmt_at_line_20_399683701()
+void RealGCD::io_in_ready()
 {
     while( true )
     {
@@ -49,7 +49,7 @@ void RealGCD::assign_stmt_at_line_20_399683701()
         io_in_ready = (sc_logic)( ( 0 == busy.read() ? 1 : 0 ) );
     }
 }
-void RealGCD::assign_stmt_at_line_21_1717688512()
+void RealGCD::io_out_valid()
 {
     while( true )
     {
@@ -57,7 +57,7 @@ void RealGCD::assign_stmt_at_line_21_1717688512()
         io_out_valid = (sc_logic)( ( ( sc_logic)( ( b.read() ).to_uint() == ( ( sc_lv< 16 > )( 0 ) ).to_uint() ) ).to_bool() & ( ( sc_logic)( busy.read() ) ).to_bool() );
     }
 }
-void RealGCD::assign_stmt_at_line_22_822815599()
+void RealGCD::io_out_bits()
 {
     while( true )
     {
@@ -65,7 +65,7 @@ void RealGCD::assign_stmt_at_line_22_822815599()
         io_out_bits = (sc_lv< 16 >)( a.read() );
     }
 }
-void RealGCD::always_stmt_at_line_24_1762260670()
+void RealGCD::a_b_busy()
 {
     while( true )
     {

@@ -31,28 +31,28 @@ SC_MODULE(RealGCD)
     sc_signal< sc_logic > allow_enter;
     sc_signal< sc_logic > gt;
     sc_signal< sc_lv< 16 > > sub;
-    void assign_stmt_at_line_17_1506083063();
-    void assign_stmt_at_line_18_829217329();
-    void assign_stmt_at_line_19_1343293809();
-    void assign_stmt_at_line_20_399683701();
-    void assign_stmt_at_line_21_1717688512();
-    void assign_stmt_at_line_22_822815599();
-    void always_stmt_at_line_24_1762260670();
+    void allow_enter();
+    void gt();
+    void sub();
+    void io_in_ready();
+    void io_out_valid();
+    void io_out_bits();
+    void a_b_busy();
     SC_CTOR( RealGCD )
     {
-        SC_THREAD( assign_stmt_at_line_17_1506083063 );
+        SC_THREAD( allow_enter );
         sensitive << io_in_valid << busy;
-        SC_THREAD( assign_stmt_at_line_18_829217329 );
+        SC_THREAD( gt );
         sensitive << a << b;
-        SC_THREAD( assign_stmt_at_line_19_1343293809 );
+        SC_THREAD( sub );
         sensitive << b << a;
-        SC_THREAD( assign_stmt_at_line_20_399683701 );
+        SC_THREAD( io_in_ready );
         sensitive << busy;
-        SC_THREAD( assign_stmt_at_line_21_1717688512 );
+        SC_THREAD( io_out_valid );
         sensitive << b << busy;
-        SC_THREAD( assign_stmt_at_line_22_822815599 );
+        SC_THREAD( io_out_bits );
         sensitive << a;
-        SC_THREAD( always_stmt_at_line_24_1762260670 );
+        SC_THREAD( a_b_busy );
         sensitive << clock.pos();
     }
 };
