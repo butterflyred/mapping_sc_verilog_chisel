@@ -17,7 +17,7 @@
 #include "systemc.h" 
 #include "RealGCD.h" 
 
-void RealGCD::allow_enter()
+void RealGCD::func_allow_enter()
 {
     while( true )
     {
@@ -25,7 +25,7 @@ void RealGCD::allow_enter()
         allow_enter = (sc_logic)( ( ( sc_logic)( io_in_valid.read() ) ).to_bool() & ( ( sc_logic)( ( 0 == busy.read() ? 1 : 0 ) ) ).to_bool() );
     }
 }
-void RealGCD::gt()
+void RealGCD::func_gt()
 {
     while( true )
     {
@@ -33,7 +33,7 @@ void RealGCD::gt()
         gt = (sc_logic)( ( a.read() ).to_uint() > ( b.read() ).to_uint() );
     }
 }
-void RealGCD::sub()
+void RealGCD::func_sub()
 {
     while( true )
     {
@@ -41,7 +41,7 @@ void RealGCD::sub()
         sub = (sc_lv< 16 >)( ( b.read() ).to_uint() - ( a.read() ).to_uint() );
     }
 }
-void RealGCD::io_in_ready()
+void RealGCD::func_io_in_ready()
 {
     while( true )
     {
@@ -49,7 +49,7 @@ void RealGCD::io_in_ready()
         io_in_ready = (sc_logic)( ( 0 == busy.read() ? 1 : 0 ) );
     }
 }
-void RealGCD::io_out_valid()
+void RealGCD::func_io_out_valid()
 {
     while( true )
     {
@@ -57,7 +57,7 @@ void RealGCD::io_out_valid()
         io_out_valid = (sc_logic)( ( ( sc_logic)( ( b.read() ).to_uint() == ( ( sc_lv< 16 > )( 0 ) ).to_uint() ) ).to_bool() & ( ( sc_logic)( busy.read() ) ).to_bool() );
     }
 }
-void RealGCD::io_out_bits()
+void RealGCD::func_io_out_bits()
 {
     while( true )
     {
@@ -65,7 +65,7 @@ void RealGCD::io_out_bits()
         io_out_bits = (sc_lv< 16 >)( a.read() );
     }
 }
-void RealGCD::a_b_busy()
+void RealGCD::func_a_b_busy()
 {
     while( true )
     {

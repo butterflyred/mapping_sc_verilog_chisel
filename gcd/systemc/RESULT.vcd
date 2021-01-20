@@ -1,0 +1,443 @@
+$date
+     Jan 20, 2021       10:23:09
+$end
+
+$version
+ SystemC 2.3.2-Accellera --- Jan 20 2021 09:40:19
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$scope module inst_RealGCD $end
+$var wire    1  aaaaa  busy       $end
+$var wire   16  aaaak  io_out_bits [15:0]  $end
+$var wire    1  aaaal  io_out_valid       $end
+$var wire   16  aaaam  io_in_bits_b [15:0]  $end
+$var wire   16  aaaan  io_in_bits_a [15:0]  $end
+$var wire    1  aaaao  io_in_valid       $end
+$var wire    1  aaaap  io_in_ready       $end
+$var wire    1  aaaaq  reset       $end
+$var wire    1  aaaar  clock       $end
+$upscope $end
+$scope module inst_driver_RealGCD $end
+$var wire   16  aaaah  d_io_in_bits_b [15:0]  $end
+$var wire   16  aaaai  d_io_in_bits_a [15:0]  $end
+$var wire    1  aaaaj  d_io_in_valid       $end
+$upscope $end
+$scope module inst_monitor_RealGCD $end
+$var wire   16  aaaab  m_io_out_bits [15:0]  $end
+$var wire    1  aaaac  m_io_out_valid       $end
+$var wire   16  aaaad  m_io_in_bits_b [15:0]  $end
+$var wire   16  aaaae  m_io_in_bits_a [15:0]  $end
+$var wire    1  aaaaf  m_io_in_valid       $end
+$var wire    1  aaaag  m_io_in_ready       $end
+$upscope $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaaaa
+b0 aaaab
+0aaaac
+b100000 aaaad
+b110000 aaaae
+1aaaaf
+1aaaag
+b100000 aaaah
+b110000 aaaai
+1aaaaj
+b0 aaaak
+0aaaal
+b100000 aaaam
+b110000 aaaan
+1aaaao
+1aaaap
+1aaaaq
+1aaaar
+$end
+
+#5000
+0aaaar
+
+#10000
+1aaaaa
+b110000 aaaab
+0aaaag
+b110000 aaaak
+0aaaap
+0aaaaq
+1aaaar
+
+#15000
+0aaaar
+
+#20000
+b100000 aaaab
+0aaaaf
+0aaaaj
+b100000 aaaak
+0aaaao
+1aaaar
+
+#25000
+0aaaar
+
+#30000
+1aaaar
+
+#35000
+0aaaar
+
+#40000
+b10000 aaaab
+b10000 aaaak
+1aaaar
+
+#45000
+0aaaar
+
+#50000
+1aaaar
+
+#55000
+0aaaar
+
+#60000
+1aaaac
+1aaaal
+1aaaar
+
+#65000
+0aaaar
+
+#70000
+0aaaaa
+b0 aaaab
+0aaaac
+1aaaag
+b0 aaaak
+0aaaal
+1aaaap
+1aaaar
+
+#75000
+0aaaar
+
+#80000
+1aaaar
+
+#85000
+0aaaar
+
+#90000
+1aaaar
+
+#95000
+0aaaar
+
+#100000
+b11 aaaad
+b111 aaaae
+1aaaaf
+b11 aaaah
+b111 aaaai
+1aaaaj
+b11 aaaam
+b111 aaaan
+1aaaao
+1aaaar
+
+#105000
+0aaaar
+
+#110000
+1aaaaa
+b111 aaaab
+0aaaag
+b111 aaaak
+0aaaap
+1aaaar
+
+#115000
+0aaaar
+
+#120000
+b11 aaaab
+0aaaaf
+0aaaaj
+b11 aaaak
+0aaaao
+1aaaar
+
+#125000
+0aaaar
+
+#130000
+1aaaar
+
+#135000
+0aaaar
+
+#140000
+1aaaar
+
+#145000
+0aaaar
+
+#150000
+b1 aaaab
+b1 aaaak
+1aaaar
+
+#155000
+0aaaar
+
+#160000
+1aaaar
+
+#165000
+0aaaar
+
+#170000
+1aaaar
+
+#175000
+0aaaar
+
+#180000
+1aaaac
+1aaaal
+1aaaar
+
+#185000
+0aaaar
+
+#190000
+0aaaaa
+b0 aaaab
+0aaaac
+1aaaag
+b0 aaaak
+0aaaal
+1aaaap
+1aaaar
+
+#195000
+0aaaar
+
+#200000
+b1010 aaaad
+b1100100 aaaae
+1aaaaf
+b1010 aaaah
+b1100100 aaaai
+1aaaaj
+b1010 aaaam
+b1100100 aaaan
+1aaaao
+1aaaar
+
+#205000
+0aaaar
+
+#210000
+1aaaaa
+b1100100 aaaab
+0aaaag
+b1100100 aaaak
+0aaaap
+1aaaar
+
+#215000
+0aaaar
+
+#220000
+b1010 aaaab
+0aaaaf
+0aaaaj
+b1010 aaaak
+0aaaao
+1aaaar
+
+#225000
+0aaaar
+
+#230000
+1aaaar
+
+#235000
+0aaaar
+
+#240000
+1aaaar
+
+#245000
+0aaaar
+
+#250000
+1aaaar
+
+#255000
+0aaaar
+
+#260000
+1aaaar
+
+#265000
+0aaaar
+
+#270000
+1aaaar
+
+#275000
+0aaaar
+
+#280000
+1aaaar
+
+#285000
+0aaaar
+
+#290000
+1aaaar
+
+#295000
+0aaaar
+
+#300000
+1aaaar
+
+#305000
+0aaaar
+
+#310000
+1aaaar
+
+#315000
+0aaaar
+
+#320000
+1aaaac
+1aaaal
+1aaaar
+
+#325000
+0aaaar
+
+#330000
+0aaaaa
+b0 aaaab
+0aaaac
+1aaaag
+b0 aaaak
+0aaaal
+1aaaap
+1aaaar
+
+#335000
+0aaaar
+
+#340000
+1aaaar
+
+#345000
+0aaaar
+
+#350000
+1aaaar
+
+#355000
+0aaaar
+
+#360000
+1aaaar
+
+#365000
+0aaaar
+
+#370000
+1aaaar
+
+#375000
+0aaaar
+
+#380000
+1aaaar
+
+#385000
+0aaaar
+
+#390000
+1aaaar
+
+#395000
+0aaaar
+
+#400000
+1aaaar
+
+#405000
+0aaaar
+
+#410000
+1aaaar
+
+#415000
+0aaaar
+
+#420000
+1aaaar
+
+#425000
+0aaaar
+
+#430000
+1aaaar
+
+#435000
+0aaaar
+
+#440000
+1aaaar
+
+#445000
+0aaaar
+
+#450000
+1aaaar
+
+#455000
+0aaaar
+
+#460000
+1aaaar
+
+#465000
+0aaaar
+
+#470000
+1aaaar
+
+#475000
+0aaaar
+
+#480000
+1aaaar
+
+#485000
+0aaaar
+
+#490000
+1aaaar
+
+#495000
+0aaaar
+
+#500000

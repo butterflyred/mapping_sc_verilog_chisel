@@ -31,28 +31,28 @@ SC_MODULE(RealGCD)
     sc_signal< sc_logic > allow_enter;
     sc_signal< sc_logic > gt;
     sc_signal< sc_lv< 16 > > sub;
-    void allow_enter();
-    void gt();
-    void sub();
-    void io_in_ready();
-    void io_out_valid();
-    void io_out_bits();
-    void a_b_busy();
+    void func_allow_enter();
+    void func_gt();
+    void func_sub();
+    void func_io_in_ready();
+    void func_io_out_valid();
+    void func_io_out_bits();
+    void func_a_b_busy();
     SC_CTOR( RealGCD )
     {
-        SC_THREAD( allow_enter );
+        SC_THREAD( func_allow_enter );
         sensitive << io_in_valid << busy;
-        SC_THREAD( gt );
+        SC_THREAD( func_gt );
         sensitive << a << b;
-        SC_THREAD( sub );
+        SC_THREAD( func_sub );
         sensitive << b << a;
-        SC_THREAD( io_in_ready );
+        SC_THREAD( func_io_in_ready );
         sensitive << busy;
-        SC_THREAD( io_out_valid );
+        SC_THREAD( func_io_out_valid );
         sensitive << b << busy;
-        SC_THREAD( io_out_bits );
+        SC_THREAD( func_io_out_bits );
         sensitive << a;
-        SC_THREAD( a_b_busy );
+        SC_THREAD( func_a_b_busy );
         sensitive << clock.pos();
     }
 };
